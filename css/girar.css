@@ -1,0 +1,48 @@
+.container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-track {
+    display: flex;
+    width: calc(100% * 3);
+    animation: slide 15s infinite;
+}
+
+.carousel-item {
+    width: calc(100% / 3);
+    flex-shrink: 0;
+}
+
+.card {
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-100%);
+    }
+    66% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
